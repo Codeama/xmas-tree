@@ -2,12 +2,15 @@ package main
 
 import ("fmt"
 "github.com/fatih/color"
+"time"
 )
+
 
 func main() {
 	topSpace := 22
 	topStars := 1
-	c := color.New(color.FgGreen)
+	green := color.New(color.Bold, color.FgGreen)
+	white := color.New(color.Bold, color.FgWhite)
 	fmt.Println()
 	fmt.Println()
 
@@ -18,13 +21,14 @@ func main() {
 		topSpace -= 2
 		for k := 0; k < topStars; k++ {
 			if k == 0 || k == (topStars - 1){
-				fmt.Print("*")
+				white.Print("0")
 			}else{
-			c.Print("*")}
+			green.Print("*")}
 		}
 		fmt.Println()
 		topStars += 4
 	}
+	time.Sleep(1 * time.Second)
 
 	midSpace := 18
 	midStars := 9
@@ -35,14 +39,15 @@ func main() {
 		midSpace -= 3
 		for k := 0; k < midStars; k++ {
 			if k == 0 || k == (midStars - 1) {
-				fmt.Print("*")
+				white.Print("0")
 			}else{
-			c.Print("*")
+			green.Print("*")
 		}
 		}
 		fmt.Println()
 		midStars += 6
 	}
+	time.Sleep(2 * time.Second)
 
 	bottomSpace := 14
 	bottomStar := 17
@@ -53,9 +58,9 @@ func main() {
 		bottomSpace -= 3
 		for k := 0; k < bottomStar; k++ {
 			if k == 0 || k == (bottomStar - 1){
-			fmt.Print("*")
+			white.Print("0")
 		}else{
-			c.Print("*")
+			green.Print("*")
 		}
 		}
 		fmt.Println()
@@ -64,17 +69,19 @@ func main() {
 
 	trunkSpace := 20
 	trunkStar := 6
+	red := color.New(color.Bold, color.FgRed)
 	for l := 0; l < 3; l++ {
 		for j := 0; j < trunkSpace; j++ {
 			fmt.Print(" ")
 		}
 
 		for k := 0; k < trunkStar; k++ {
-			c.Print("*")
+			red.Print("*")
 	}
 		fmt.Println()
 	}
 	fmt.Println()
-	fmt.Println(".................MERRY CHRISTMAS................")
+	red.Println(".................MERRY CHRISTMAS................")
+	fmt.Println()
 }
 
