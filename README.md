@@ -1,6 +1,6 @@
 ## Christmas Tree Challenge 2021
 
-[image](xmas-tree-2021.png)
+![Terminal output](xmas-tree-2021.png)
 
 ### Run the docker image
 
